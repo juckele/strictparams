@@ -4,7 +4,8 @@ A strict parameter module
 
 ## Code Examples
 
-```var params = require('strictparams');
+```
+var params = require('strictparams');
 
 function foobar(p) {
    // checks that p contains keys in the required array and doesn't contain keys not in the optional array
