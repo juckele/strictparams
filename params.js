@@ -12,6 +12,9 @@ module.exports = {
 	if ( ! parameters ) {
 	    parameters = {};
 	}
+	else if ( typeof parameters != 'object') {
+	    throw new Error("Parameters object must be an object");
+	}
 	var parameterKeys = Object.keys(parameters);
 	for ( var i = 0 ; i < required.length; i++ ) {
 	    if ( ! ( required[i] in parameters ) ) {
@@ -39,6 +42,9 @@ module.exports = {
 	if ( ! parameters ) {
 	    parameters = {};
 	}
+	else if ( typeof parameters != 'object') {
+	    throw new Error("Parameters object must be an object");
+	}
 	for ( var i = 0 ; i < required.length; i++ ) {
 	    if ( ! ( required[i] in parameters ) ) {
 		throw new Error("Parameter "+required[i]+" expected and not found");
@@ -54,6 +60,9 @@ module.exports = {
     optional : function (parameters, optional) {
 	if ( ! parameters ) {
 	    parameters = {};
+	}
+	else if ( typeof parameters != 'object') {
+	    throw new Error("Parameters object must be an object");
 	}
 	var parameterKeys = Object.keys(parameters);
 	for ( var i = 0; i < parameterKeys.length; i++ ) {

@@ -2,7 +2,7 @@
     "name": "strictparams",
     "description": "Parameter validation for functions",
     "author": "John H. Uckele",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "main": "params.js",
     "repository": {
 	"type": "git",
